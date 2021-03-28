@@ -14,7 +14,7 @@ import javax.swing.JTextArea;
 public class JavaMemo extends JFrame {
 
 	private JMenuItem jmiNew, jmiOpen, jmiSave, jmiNewSave, jmiEnd, jmiFont, jmiHelp;
-	//?ƒˆê¸?, ?—´ê¸?,???¥, ?ƒˆ?´ë¦„ìœ¼ë¡?, ì¢…ë£Œ, ê¸?ê¼?, ?„??ë§?
+	
 	private JTextArea jtaNote;
 	
 	
@@ -24,54 +24,47 @@ public class JavaMemo extends JFrame {
 		//ì»´í¬?„Œ?Š¸ ?ƒ?„±.
 		JMenuBar jmb=new JMenuBar();
 		
-		JMenu jmFile=new JMenu("?ŒŒ?¼");
-		JMenu jmFormat=new JMenu("?„œ?‹");
-		JMenu jmHelp=new JMenu("?„??ë§?");
+		JMenu jmFile=new JMenu("ÆÄÀÏ");
+		JMenu jmFormat=new JMenu("±Û²Ã ¼³");
+		JMenu jmHelp=new JMenu("µµ¿ò¸»");
 		
-		jmiNew=new JMenuItem("?ƒˆê¸?");
-		jmiOpen=new JMenuItem("?—´ê¸?");
-		jmiSave=new JMenuItem("???¥");
-		jmiNewSave=new JMenuItem("?ƒˆ?´ë¦„ìœ¼ë¡?"); 
-		jmiEnd=new JMenuItem("ì¢…ë£Œ"); 
-		jmiFont=new JMenuItem("ê¸?ê¼?"); 
-		jmiHelp=new JMenuItem("ë©”ëª¨?¥? •ë³?");
+		jmiNew=new JMenuItem("»õ±Û");
+		jmiOpen=new JMenuItem("¿­±â");
+		jmiSave=new JMenuItem("ÀúÀå");
+		jmiNewSave=new JMenuItem("´Ù¸¥ÀÌ¸§À¸·Î ÀúÀå"); 
+		jmiEnd=new JMenuItem("´İ±â"); 
+		jmiFont=new JMenuItem("±Û²Ã¼³Á¤"); 
+		jmiHelp=new JMenuItem("µµ¿ò¸»º¸±â");
 		
 		jtaNote=new JTextArea();
-		//?½?–´?“¤?¸ ?°?Š¸ë¥? ?„¤? •
-		if( initFont != null) {//?½?–´?“¤?¸ ?°?Š¸ê°? ì¡´ì¬?•œ?‹¤ë©? JTextArea?— Fontë¥? ?„¤? •
+		if( initFont != null) {
 			jtaNote.setFont(initFont);
 		}//end if
 		
-		JScrollPane jspNote=new JScrollPane( jtaNote );//?Š¤?¬ë¡¤ë°”ê°? ?—†?Š” ê°ì²´?— ?Š¤?¬ë¡¤ë°”ë¥? ë¶™ì¸?‹¤.  
+		JScrollPane jspNote=new JScrollPane( jtaNote ); 
 				
-		//ë°°ì¹˜.
-		//ë©”ë‰´?•„?´?…œ->ë©”ë‰´ ë°°ì¹˜ ( êµ¬ë¶„?„  ?•„?š” : addSeparator() )
-		jmFile.add(jmiNew); //?ƒˆê¸?
+		
+		jmFile.add(jmiNew); 
 		jmFile.addSeparator();
-		jmFile.add(jmiOpen); //?—´ê¸?
-		jmFile.add(jmiSave); //???¥
-		jmFile.add(jmiNewSave); //?ƒˆ?´ë¦?
+		jmFile.add(jmiOpen); 
+		jmFile.add(jmiSave); 
+		jmFile.add(jmiNewSave); 
 		jmFile.addSeparator();
-		jmFile.add(jmiEnd); //?‹«ê¸?
+		jmFile.add(jmiEnd);
 		
-		jmFormat.add(jmiFont); //?„œ?‹
+		jmFormat.add(jmiFont);
 		
-		jmHelp.add(jmiHelp);//?„??ë§?
+		jmHelp.add(jmiHelp);
 		
-		//ë©”ë‰´->ë©”ë‰´ë°? ë°°ì¹˜
 		jmb.add( jmFile );
 		jmb.add( jmFormat );
 		jmb.add( jmHelp );
 		
-		//ë©”ë‰´ë°? ?”„? ˆ?„ ë°°ì¹˜
 		setJMenuBar(jmb);
 		
-		//JTextAreaë¥? Frame?— ë°°ì¹˜
 		add("Center",jspNote);
 		
-		//?´ë²¤íŠ¸ ì²˜ë¦¬ ?´?˜?Š¤?˜ ê°ì²´?ƒ?„±.
 		JavaMemoEvt jme=new JavaMemoEvt(this);
-//		//ì»´í¬?„Œ?Š¸ë¥? ?´ë²¤íŠ¸?— ?“±ë¡í•˜ê³?, ?´ë²¤íŠ¸ ë°œìƒ ?‹œ ì²˜ë¦¬?•  ê°ì²´ ?„¤? •.		
 		jmiNew.addActionListener( jme );
 		jmiOpen.addActionListener( jme );
 		jmiSave.addActionListener( jme );
@@ -84,9 +77,7 @@ public class JavaMemo extends JFrame {
 //		
 //		addWindowListener( jme );
 		
-		//?œˆ?„?š° ?¬ê¸°ì„¤? •.
 		setBounds(100, 100, 800, 700);
-		//ê°??‹œ?™”
 		setVisible(true);
 		
 	}//JavaMemo

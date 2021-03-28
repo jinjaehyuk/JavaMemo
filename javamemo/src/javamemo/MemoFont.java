@@ -34,21 +34,19 @@ public class MemoFont extends JDialog {
 		
 		setDefaultCloseOperation( JFrame.DISPOSE_ON_CLOSE );
 		setBounds(jm.getX()+200, jm.getY()+150, 500, 600);
-//		setSize( 500, 600);
-//		setLocationRelativeTo(null);
 		setLayout(null);
 		
-		jbtnConfirm = new JButton("?ôï?ù∏");
-		jbtnCancel = new JButton("Ï∑®ÏÜå");
+		jbtnConfirm = new JButton("»Æ¿Œ");
+		jbtnCancel = new JButton("√Îº“");
 
-		JLabel jlbFormat = new JLabel("Í∏?Íº?(F):");
-		JLabel jlbStyle = new JLabel("Í∏?Íº? ?ä§???ùº(Y):");
-		JLabel jlbSize = new JLabel("?Å¨Í∏?(S):");
+		JLabel jlbFormat = new JLabel("±€≤√(F):");
+		JLabel jlbStyle = new JLabel("±€≤√ Ω∫≈∏¿œ (Y):");
+		JLabel jlbSize = new JLabel("±€≤√ ≈©±‚(S):");
 		
-		jlbPreview = new JLabel("Í∞??Çò?ã§AaBbYyZz");
-		JLabel jlbSctipt = new JLabel("?ä§?Å¨Î¶ΩÌä∏(R):");
+		jlbPreview = new JLabel("∞°≥™¥Ÿ AaBbYyZz");
+		JLabel jlbSctipt = new JLabel("πÃ∏Æ∫∏±‚ (R):");
 		jlbPreview.setFont(new Font("Dialog",Font.BOLD,25));
-		jlbPreview.setBorder(new TitledBorder("Î≥¥Í∏∞"));
+		jlbPreview.setBorder(new TitledBorder("±€≤√"));
 
 		jtfFormat = new JTextField(20);
 		jtfStyle = new JTextField(15);
@@ -68,17 +66,11 @@ public class MemoFont extends JDialog {
 		
 		chPreview = new Choice();
 		
-		//?ù¥Î≤§Ìä∏Ï≤òÎ¶¨ ?Å¥?ûò?ä§Î•? ?Éù?Ñ±.
 		MemoFontEvt mfe=new MemoFontEvt(this);
-//		//?ù¥Î≤§Ìä∏?óê ?ì±Î°?
-//		//?úà?èÑ?ö∞ ?ù¥Î≤§Ìä∏
 		addWindowListener( mfe );
-//		//?ï°?Öò?ù¥Î≤§Ìä∏
 		jbtnConfirm.addActionListener(mfe);
 		jbtnCancel.addActionListener(mfe);
-//		//Choice?ù¥Î≤§Ìä∏ 
 		chPreview.addItemListener(mfe);
-//		//JList?ù¥Î≤§Ìä∏
 		jlFormat.addListSelectionListener(mfe);
 		jlStyle.addListSelectionListener(mfe);
 		jlSize.addListSelectionListener(mfe);
@@ -122,7 +114,6 @@ public class MemoFont extends JDialog {
 
 
 	private void addWindowListener(MemoFontEvt mfe) {
-		// TODO ?ûê?èô ?Éù?Ñ±?êú Î©îÏÜå?ìú ?ä§?ÖÅ
 		
 	}
 

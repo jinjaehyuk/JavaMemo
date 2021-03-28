@@ -23,25 +23,21 @@ public class MemoFontEvt implements ActionListener, ItemListener, ListSelectionL
 	public MemoFontEvt(MemoFont mf ) {
 		this.mf = mf;
 		formatArr = new String[] {"Dialog","Monospaced","Serif","SansSerif"};
-		styleArr = new String[] {"ë³´í†µ","êµµê²Œ","ê¸°ìš¸?ž„ê¼?","êµµì? ê¸°ìš¸?ž„ê¼?"};
+		styleArr = new String[] {"º¸Åë","±½°Ô","±â¿ïÀÓ²Ã","±½°Ô ±â¿ïÀÓ²Ã"};
 		
 		DefaultListModel<String> dlmFormat = mf.getDlmFormat();
 		DefaultListModel<String> dlmStyle = mf. getDlmStyle();
 		DefaultListModel<String> dlmSize = mf.getDlmSize();
 		
-		//ê¸?ê¼? ?„¤? •
 		for(int i =0; i < formatArr.length; i++) {
 			dlmFormat.addElement(formatArr[i]);
 		}//end for
-		//ê¸?ê¼? ?Š¤???¼
 		for(int i = 0; i < styleArr.length; i++) {
 			dlmStyle.addElement(styleArr[i]);
 		}//end for
 		
-		//ë¯¸ë¦¬ë³´ê¸°
-		mf.getChPreview().add("?•œê¸?");
-		mf.getChPreview().add("?˜?–´");
-		//?‚¬?´ì¦?
+		mf.getChPreview().add("ÇÑ±Û");
+		mf.getChPreview().add("¿µ¾î");
 		dlmSize.addElement(String.valueOf("7"));
 		dlmSize.addElement(String.valueOf("8"));
 		dlmSize.addElement(String.valueOf("9"));
@@ -57,10 +53,10 @@ public class MemoFontEvt implements ActionListener, ItemListener, ListSelectionL
 	}//MemoFontEvt
 	@Override
 	public void itemStateChanged(ItemEvent ie) {
-		if(ie.getItem().equals("?•œê¸?")) {
-			mf.getJlbPreview().setText("ê°??‚˜?‹¤AaBbYyZz");
+		if(ie.getItem().equals("ÇÑ±Û")) {
+			mf.getJlbPreview().setText("°¡³ª´Ù AaBbYyZz");
 		}//end if
-		if(ie.getItem().equals("?˜?–´")) {
+		if(ie.getItem().equals("¿µ¾î")) {
 			mf.getJlbPreview().setText("AaBbCc...Zz");
 		}
 	}//itemStateChanged
