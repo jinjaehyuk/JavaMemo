@@ -19,7 +19,7 @@ public class JavaMemo extends JFrame {
 	
 	
 	public JavaMemo(Font initFont) {
-		super("ë©”ëª¨?¥");
+		super("ÀÚ¹Ù¸Ş¸ğÀå");
 		
 		//ì»´í¬?„Œ?Š¸ ?ƒ?„±.
 		JMenuBar jmb=new JMenuBar();
